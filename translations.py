@@ -66,7 +66,7 @@ translations = {
         'page_title': "谁取关了我？",
         'title': "😈 谁取关了我？",
         'subheader': "有没有遇到过有人热情地和你交换IG,后来才发现他们只是想要一个粉丝,隔天就取消关注了?🤡",
-        'caption': "揭露这些偷偷取关的人！这个工具将帮你查看谁玩了这些把戏！😈",
+        'caption': "揭露这些偷偷取关的人！这个工具将帮你查看谁玩了这些小把戏！😈",
         'upload_header': "📁 上传你的数据",
         'upload_followers': "选择你的 FOLLOWERS_1.json 文件",
         'upload_following': "选择你的 FOLLOWING.json 文件",
