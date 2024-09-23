@@ -1,8 +1,4 @@
 # 😈 Who the hell unfollowed me?
-
-![Screenshot1](/img/Screenshot1.png)
-![Screenshot2](/img/Screenshot2.png)
-![Screenshot3](/img/Screenshot3.png)
 Ever had someone eagerly exchange IGs with you, only to realize later they just wanted a follower and unfollowed you the next day? 🤔
 This is your lucky day to uncover these sneaky unfollowers! 🕵️‍♀️
 
@@ -27,6 +23,7 @@ Additionally !
 3. 🏃‍♂️ Run the app: `streamlit run app.py`
 4. 📁 Upload your JSON files and start investigating!
 
-## 📄 License
-
-MIT License
+## Screenshot
+![Screenshot1](/img/Screenshot1.png)
+![Screenshot2](/img/Screenshot2.png)
+![Screenshot3](/img/Screenshot3.png)
