@@ -1,6 +1,6 @@
 # 😈 Who the hell unfollowed me?
-Ever had someone eagerly exchange IGs with you, only to realize later they just wanted a follower and unfollowed you the next day? 🤔
-This is your lucky day to uncover these sneaky unfollowers! 🕵️‍♀️
+Believe it or not, the most straightforward method to uncover who unfollowed you on Instagram doesn't require any fancy tools.
+This is a simple tool for you to uncover these sneaky unfollowers! 🕵️‍♀️
 
 ## ✨ Main Features
 
@@ -27,3 +27,6 @@ Additionally !
 ![Screenshot1](/img/Screenshot1.png)
 ![Screenshot2](/img/Screenshot2.png)
 ![Screenshot3](/img/Screenshot3.png)
+
+## Tech Stack
+Streamlit framework with some plotly visualisation
