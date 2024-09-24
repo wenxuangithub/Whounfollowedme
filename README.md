@@ -30,3 +30,9 @@ Additionally !
 
 ## Tech Stack
 Streamlit framework with some plotly visualisation
+
+## Legal
+This tool and the information provided in this article are not affiliated with, endorsed by, or officially connected to Instagram or its parent company, Meta Platforms, Inc. in any way. The tool discussed here is a third-party application developed independently.
+While we strive to provide accurate and helpful information, please be aware that using third-party tools to analyze your Instagram account may violate Instagram's terms of service. We encourage you to review Instagram's official policies before using any external applications.
+Remember, your privacy and account security are paramount. Use this or any similar tools at your own discretion and risk. We are not responsible for any potential consequences that may arise from the use of third-party Instagram analysis tools.
+Always prioritize ethical social media practices and respect the privacy of others when using such applications.
