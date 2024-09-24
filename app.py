@@ -220,6 +220,14 @@ def main():
             st.caption(get_text('caption', st.session_state.lang))
             st.warning(get_text('upload_warning', st.session_state.lang))
             show_download_guide()
+            st.warning(
+        "⚠️Disclaimer : This tool and the information provided are not affiliated with, endorsed by, or officially connected "
+        "to Instagram or its parent company, Meta Platforms, Inc. in any way. This is a third-party application "
+        "developed independently. Using third-party tools to analyze your Instagram account may violate Instagram's "
+        "terms of service. Please review Instagram's official policies before use. Your privacy and account security "
+        "are paramount. Use this tool at your own discretion and risk. We are not responsible for any potential "
+        "consequences. Always prioritize ethical social media practices and respect others' privacy."
+    )
         st.markdown(footer_html, unsafe_allow_html=True)
 
     except ValueError as e:
