@@ -1,35 +1,56 @@
-# 😈 Who the hell unfollowed me?
+# 😈 Who unfollowed me?
 Believe it or not, the most straightforward method to uncover who unfollowed you on Instagram doesn't require any fancy tools.
 This is a simple tool for you to uncover these sneaky unfollowers! 🕵️‍♀️
 
-## ✨ Main Features
+## Main Features
 
 - 🙅‍♂️ Discover who's not following you back
 - 🤷‍♀️ Find out who you don't follow back
 - 🔎 Search for specific users and their relationship status
 - 🏆 Identify your most loyal followers !
-
-Additionally !
-
 - 🕰️ Find the most active time for new followers
 - 🌡️ Uncover seasonal trends in your follower growth
 - 🌐 Supports both English and Chinese
 
-## 🚀 If you want to run it in your machine !
+## Setup Instructions
 
-0. Make sure you've installed Python !
-1. 📥 Download your Instagram data (FOLLOWERS_1.json and FOLLOWING.json)
-2. 💻 Install requirements: `pip install -r requirements.txt`
-3. 🏃‍♂️ Run the app: `streamlit run app.py`
-4. 📁 Upload your JSON files and start investigating!
+### 1. Clone the Repository
 
-## Screenshot
-![Screenshot1](/img/Screenshot1.png)
+```bash
+git clone https://github.com/wenxuangithub/Whounfollowedme
+cd Whounfollowedme
+```
+### 2. Create and Activate a Virtual Environment
+```bash
+# Create a virtual environment
+python -m venv venv
+
+# On Windows:
+venv\Scripts\activate
+
+# On macOS/Linux:
+source venv/bin/activate
+```
+
+### 3. Install Dependencies
+```bash
+pip install -r requirements.txt
+```
+
+### 4. Run the Streamlit App
+```bash
+streamlit run app.py
+```
+
+## Screenshots
 ![Screenshot2](/img/Screenshot2.png)
 ![Screenshot3](/img/Screenshot3.png)
+![Screenshot1](/img/Screenshot1.png)
 
 ## Tech Stack
+Python >= 3.8
 Streamlit framework with some plotly visualisation
+
 
 ## Legal
 This tool and the information provided in this article are not affiliated with, endorsed by, or officially connected to Instagram or its parent company, Meta Platforms, Inc. in any way. The tool discussed here is a third-party application developed independently.
