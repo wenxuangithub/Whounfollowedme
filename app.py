@@ -13,19 +13,54 @@ def get_text(key, lang='en'):
 def process_json_data(data, file_type):
     try:
         if file_type == "followers":
+            # followers: list of objects
             df = pd.json_normalize(data)
-        else:  # following
-            df = pd.json_normalize(data['relationships_following'])
-        
-        df['username'] = df['string_list_data'].apply(lambda x: x[0]['value'])
-        df['date'] = pd.to_datetime(df['string_list_data'].apply(lambda x: x[0]['timestamp']), unit='s')
-        df['link'] = df['string_list_data'].apply(lambda x: x[0]['href'])
-        df = df.drop(['title', 'media_list_data', 'string_list_data'], axis=1)
+
+        else: 
+            if isinstance(data, dict) and "relationships_following" in data:
+                df = pd.json_normalize(data["relationships_following"])
+            else:
+                df = pd.json_normalize(data)
+
+        def extract_username(row):
+            sld = row.get("string_list_data", [])
+            if isinstance(sld, list) and len(sld) > 0:
+                first = sld[0]
+                if "value" in first and first["value"]:
+                    return first["value"]        
+
+            return row.get("title", "")          
+
+        df["username"] = df.apply(extract_username, axis=1)
+
+
+        df["link"] = df["string_list_data"].apply(
+            lambda x: x[0].get("href", "") if isinstance(x, list) and x else ""
+        )
+
+        df["date"] = df["string_list_data"].apply(
+            lambda x: pd.to_datetime(x[0]["timestamp"], unit="s")
+            if isinstance(x, list) and x and "timestamp" in x[0]
+            else pd.NaT
+        )
+
+        for col in ["title", "media_list_data", "string_list_data"]:
+            if col in df.columns:
+                df = df.drop(col, axis=1)
+
         return df
+
     except KeyError as e:
-        raise ValueError(get_text('error_invalid_json', st.session_state.lang).format(file_type=file_type, error=str(e)))
+        raise ValueError(get_text('error_invalid_json', st.session_state.lang).format(
+            file_type=file_type,
+            error=str(e)
+        ))
     except Exception as e:
-        raise ValueError(get_text('error_processing', st.session_state.lang).format(file_type=file_type, error=str(e)))
+        raise ValueError(get_text('error_processing', st.session_state.lang).format(
+            file_type=file_type,
+            error=str(e)
+        ))
+
 
 def load_data(uploaded_file, file_type):
     if uploaded_file is not None:
@@ -147,6 +182,8 @@ def main():
     
     st.title(get_text('title', st.session_state.lang))
     st.sidebar.header(get_text('upload_header', st.session_state.lang))
+    if st.button("Go to Follower Comparison"):
+        st.switch_page("pages/Follower_Comparison.py")
     
     followers_file = st.sidebar.file_uploader(get_text('upload_followers', st.session_state.lang), type="json", key="followers")
     following_file = st.sidebar.file_uploader(get_text('upload_following', st.session_state.lang), type="json", key="following")

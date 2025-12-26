@@ -2,8 +2,8 @@
 translations = {
     'en': {
         'page_title': "Who unfollowed me?",
-        'title': "😈 Who the hell unfollowed me?",
-        'subheader': "Ever had someone eagerly exchange IGs with you, only to realize later they just wanted a follower and unfollowed you the next day?🤔",
+        'title': "😈 Who unfollowed me?",
+        'subheader': "Ever had someone excited to exchange IGs with you, only to realize later they just wanted a follower and unfollowed you the next day?🤔",
         'caption': "This is your lucky day to uncover these sneaky unfollowers! This tool helps you check who's following you, who's not, and who pulled the old follow-unfollow trick.",
         'upload_header': "📁 Upload Your Data",
         'upload_followers': "Choose your FOLLOWERS_1.json file",
